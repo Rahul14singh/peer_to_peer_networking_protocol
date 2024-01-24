@@ -223,7 +223,7 @@ def main(peer_ip_ports, peer_id, public_key_path, private_key_path, passphrase):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Send data to a peer.")
-    parser.add_argument("--peer_ip_ports", nargs='+', default=[('10.35.70.24:33354')], help="List of tuples containing peer IP addresses and ports")
+    parser.add_argument("--peer_ip_ports", nargs='+', default=[('IP_MOON_SATELLITE:PORT_MOON_SATELLITE')], help="List of tuples containing peer IP addresses and ports")
     parser.add_argument("--peer_id", default='Mars_Rover', help="Unique identifier for this peer")
     args = parser.parse_args()
 
