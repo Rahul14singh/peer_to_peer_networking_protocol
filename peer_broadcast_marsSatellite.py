@@ -169,8 +169,8 @@ class Peer:
                         logging.debug("Removed")
 
                 for message in messages_to_remove:
-                    # Send a deleted message to 10.35.70.24:33340
-                    self.send_deleted_message("10.35.70.24", 33340, message, repetitions=20, interval=450)
+                    # Send a deleted message to IP_EARTH:PORT_EARTH
+                    self.send_deleted_message("IP_EARTH", PORT_EARTH, message, repetitions=20, interval=450)
                     
                     self.message_receivers.pop(message)
                     self.message_cache = [mess for mess in self.message_cache if message not in mess]
