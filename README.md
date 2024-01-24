@@ -37,7 +37,9 @@ Run peer_receiver_landerModule_rsademo.py on the desired listening device, prefe
 > **Note**: Ensure that the *.pem files and the data_test directory are located in the same directory as the scripts.
 
 
-### Testing Broadcast Channel Deletion (Data deletion from each peer occurs through broadcasting once successful verification of reception at Earth is confirmed).
+### Testing Broadcast Channel Deletion 
+
+Data deletion from each peer occurs through broadcasting once successful verification of reception at Earth is confirmed.
 
 To test the deletion of data from the broadcast channel:
 
