@@ -14,7 +14,7 @@ List of Peers:
 6. Earth(system)
 
 
-## Setup the env by running the bash script run.sh first
+## Setting Up the Environment
 
 To establish the communication environment, execute the provided bash script run.sh to initialize the necessary configurations:
 
