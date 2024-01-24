@@ -20,7 +20,7 @@ List of Peers:
 $ source run.sh
 ```
 
-## To Test RSA & Encryption 
+### To Test RSA & Encryption 
 
 ```bash
 peer_receiver_landerModule_rsademo.py
@@ -37,7 +37,7 @@ Then run peer_sender_marsRover_rsademo.py and it will send the last 5 hours of d
 > **Note**: Keep the *.pem files and data_test directory in same directory as the codes 
 
 
-## To test Broadcast deletion the whole deletion channel
+### To test Broadcast deletion the whole deletion channel
 
 > **Note**: Update IPs in the code if not using PIs as mentioned below to run these:
 
@@ -53,7 +53,7 @@ Following are the broadcasting scripts to be deployed on every peer (in this cas
 5. peer_broadcast_moonSatellite.py
 6. peer_broadcast_earth.py           
 
-## To Test and simulate data generation and to test sending and receiving the whole data over the channel peer-to-peer connection
+### To Test and simulate data generation and to test sending and receiving the whole data over the channel peer-to-peer connection
 
 > **Note**: Update IPs in the code if not using PIs as mentioned below to run these
 
