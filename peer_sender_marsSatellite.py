@@ -161,7 +161,7 @@ def main(peer_ip_ports, peer_id):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Send data to a peer.")
-    parser.add_argument("--peer_ip_ports", nargs='+', default=[('10.35.70.31:33334'), ('10.35.70.24:33338')], help="List of tuples containing peer IP addresses and ports")
+    parser.add_argument("--peer_ip_ports", nargs='+', default=[('IP_MARS_SATELLITE:PORT_MARS_SATELLITE'), ('IP_MOON_SATELLITE:PORT_MOON_SATELLITE')], help="List of tuples containing peer IP addresses and ports")
     parser.add_argument("--peer_id", default='Lander_Module', help="Unique identifier for this peer")
     args = parser.parse_args()
 
