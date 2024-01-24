@@ -145,9 +145,9 @@ class Peer:
                         messages_to_remove.append(cached_message)
 
                 for message in messages_to_remove:
-                    # Send a deleted message to 10.35.70.24:33340
+                    # Send a deleted message to IP_EARTH:PORT_EARTH
                     deleted_file = message.split(": Delete ")[1].strip()
-                    self.send_deleted_message("10.35.70.24", 33340, deleted_file, repetitions=20, interval=450)
+                    self.send_deleted_message("IP_EARTH", PORT_EARTH, deleted_file, repetitions=20, interval=450)
                     
                     self.message_receivers.pop(message)
                     self.message_cache.remove(message)
@@ -157,9 +157,9 @@ class Peer:
 if __name__ == "__main__":
     # Define your host, port, and a list of known peers
     current_id = "Moon_Satellite"
-    current_host = "10.35.70.24"
-    current_port = 33342
-    known_peers = [("10.35.70.12", 33343), ("10.35.70.28", 33344), ("10.35.70.42", 33345)]
+    current_host = "IP_MOON_SATELLITE"
+    current_port = PORT_MOON_SATELLITE
+    known_peers = [("IP_CURIOSITY_ROVER", PORT_CURIOSITY_ROVER), ("IP_MARS_ROVER", PORT_MARS_ROVER), ("IP_LANDER_MODULE", PORT_LANDER_MODULE)]
 
     # Create a Peer instance
     peer = Peer(current_host, current_port, known_peers)
