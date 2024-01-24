@@ -67,11 +67,11 @@ b). Keep the data_test directory in the same directory as the scripts.
 
 Following are the scripts to be deployed on separate peers (in this case Raspberry Pi) to start the communication in the system:
 
-1. launcher_curiosityRover.py peer_receiver_curiosityRover.py  peer_sender_curiosityRover.py 
-2. launcher_marsRover.py peer_receiver_marsRover.py  peer_sender_marsRover.py 
-3. launcher_landerModule.py peer_receiver_landerModule.py  peer_sender_landerModule.py 
-4. launcher_marsSatellite.py peer_receiver_marsSatellite.py  peer_sender_marsSatellite.py 
-5. launcher_moonSatellite.py peer_receiver_moonSatellite.py  peer_sender_moonSatellite.py 
+1. launcher_curiosityRover.py  peer_receiver_curiosityRover.py   peer_sender_curiosityRover.py 
+2. launcher_marsRover.py  peer_receiver_marsRover.py   peer_sender_marsRover.py 
+3. launcher_landerModule.py  peer_receiver_landerModule.py   peer_sender_landerModule.py 
+4. launcher_marsSatellite.py  peer_receiver_marsSatellite.py   peer_sender_marsSatellite.py 
+5. launcher_moonSatellite.py  peer_receiver_moonSatellite.py   peer_sender_moonSatellite.py 
 6. peer_receiver_earth.py 
 
 The launcher_* scripts will generate dummy data, the peer_sender_* scripts will transmit the data, and the peer_receiver_* scripts will capture the data on all peers.
