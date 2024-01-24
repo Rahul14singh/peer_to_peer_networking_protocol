@@ -105,7 +105,7 @@ if __name__ == "__main__":
     current_id = "Curiosity_Rover"
     current_host = "IP_CURIOSITY_ROVER"
     current_port = PORT_CURIOSITY_ROVER
-    known_peers = [("IP_LANDER_MODULE", 33341), ("IP_MOON_SATELLITE", 33342)]
+    known_peers = [("IP_LANDER_MODULE", PORT_LANDER_MODULE), ("IP_MOON_SATELLITE", PORT_MOON_SATELLITE)]
 
     # Create a Peer instance
     peer = Peer(current_host, current_port, known_peers)
