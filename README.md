@@ -1,6 +1,7 @@
 # Peer-to-Peer Networking Protocol 
 
 Robust Inter-Planetary Communication Network
+
 This project implements a peer-to-peer (P2P) networking protocol designed to facilitate secure and efficient data exchange between various satellites orbiting Mars and Earth. The network comprises a diverse set of nodes representing different spacecraft:
 
 List of Peers:
