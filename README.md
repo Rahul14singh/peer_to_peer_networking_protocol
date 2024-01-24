@@ -1,11 +1,10 @@
 # Peer-to-Peer Networking Protocol 
 
-Peer to Peer Networking Protocol to communicate between Raspberry Pi's.
-
-(Use Case) Communication between different Satellites around Mars and Earth and sending sensor data collected by all peers securely through sensors back to Earth.
-
+Robust Inter-Planetary Communication Network
+This project implements a peer-to-peer (P2P) networking protocol designed to facilitate secure and efficient data exchange between various satellites orbiting Mars and Earth. The network comprises a diverse set of nodes representing different spacecraft:
 
 List of Peers:
+
 1. Curiosity Rover
 2. Mars Rover
 3. Mars Lander
@@ -16,11 +15,16 @@ List of Peers:
 
 ## Setup the env by running the bash script run.sh first
 
+To establish the communication environment, execute the provided bash script run.sh to initialize the necessary configurations:
+
 ```bash
 $ source run.sh
 ```
 
-### To Test RSA & Encryption 
+
+### Testing RSA Encryption and Decryption
+
+Verify the implementation of RSA encryption and decryption modules using the following scripts:
 
 ```bash
 peer_receiver_landerModule_rsademo.py
@@ -28,24 +32,22 @@ peer_receiver_landerModule_rsademo.py
 peer_sender_marsRover_rsademo.py
 ```
 
-These are the files we will need to check for RSA and Encryption.
+Run peer_receiver_landerModule_rsademo.py on the desired listening device, preferably on the IP address of the Moon Satellite. Then, execute peer_sender_marsRover_rsademo.py to transmit the last 5 hours of data to the receiver, ensuring secure encryption and decryption.
 
-Run peer_receiver_landerModule_rsademo.py where you want to listen preferably on IP_MOON_SATELLITE.
-
-Then run peer_sender_marsRover_rsademo.py and it will send the last 5 hours of data to the receiver with encryption and decryption
-
-> **Note**: Keep the *.pem files and data_test directory in same directory as the codes 
+> **Note**: Ensure that the *.pem files and the data_test directory are located in the same directory as the scripts.
 
 
-### To test Broadcast deletion the whole deletion channel
+### Testing Broadcast Channel Deletion (Data deletion from each peer occurs through broadcasting once successful verification of reception at Earth is confirmed).
 
-> **Note**: Update IPs in the code if not using PIs as mentioned below to run these:
+To test the deletion of data from the broadcast channel:
 
-> **Note**: At first start listening on all these PIs and then press enter from curiosity rover to earth to connect to peers this can be made automatic in a later version
-
-> **Note**: Keep the data_test directory in the same directory as the codes 
+a). Update the IP addresses in the scripts to reflect the actual network configuration (if not using Raspberry Pis).
+b). Initially, initiate listening on all devices using the provided scripts.
+c). From the Curiosity Rover, press enter to connect to the other peers. This can be automated in future versions.
+d). Keep the data_test directory in the same directory as the scripts.
 
 Following are the broadcasting scripts to be deployed on every peer (in this case Raspberry Pi) to able to communicate with each other:
+
 1. peer_broadcast_curiosityRover.py  
 2. peer_broadcast_marsRover.py     
 3. peer_broadcast_landerModule.py  
@@ -53,13 +55,15 @@ Following are the broadcasting scripts to be deployed on every peer (in this cas
 5. peer_broadcast_moonSatellite.py
 6. peer_broadcast_earth.py           
 
-### To Test and simulate data generation and to test sending and receiving the whole data over the channel peer-to-peer connection
+### Testing Data Generation and Transmission
 
-> **Note**: Update IPs in the code if not using PIs as mentioned below to run these
+To simulate data generation and test sending and receiving data over the P2P channel:
 
-> **Note**: Keep the data_test directory in same directory as the codes 
+a). Update the IP addresses in the scripts to match your network configuration (if not using Raspberry Pis).
+b). Keep the data_test directory in the same directory as the scripts. 
 
 Following are the scripts to be deployed on separate peers (in this case Raspberry Pi) to start the communication in the system:
+
 1. launcher_curiosityRover.py peer_receiver_curiosityRover.py  peer_sender_curiosityRover.py 
 2. launcher_marsRover.py peer_receiver_marsRover.py  peer_sender_marsRover.py 
 3. launcher_landerModule.py peer_receiver_landerModule.py  peer_sender_landerModule.py 
@@ -67,4 +71,4 @@ Following are the scripts to be deployed on separate peers (in this case Raspber
 5. launcher_moonSatellite.py peer_receiver_moonSatellite.py  peer_sender_moonSatellite.py 
 6. peer_receiver_earth.py 
 
-The launcher_* scripts will start creating dummy data and peer_sender_* scripts will start sending it and the peer_receiver_* scripts will start receiving the data on all peers.
+The launcher_* scripts will generate dummy data, the peer_sender_* scripts will transmit the data, and the peer_receiver_* scripts will capture the data on all peers.
