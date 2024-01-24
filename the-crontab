@@ -1,0 +1,46 @@
+##### Uncomment the Below on PI 12 and install on crontab by crontab -e
+#Run the scripts to generate the sensor data
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/launcher_curiosityRover.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/launcher_20231126003712.log 2>&1
+#Run the script to send data to the server every 15 minutes
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_sender_curiosityRover.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/peer_sender_20231126003712.log 2>&1
+#Run the script to receive data
+*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_curiosityRover.py
+ 
+ 
+##### Uncomment the Below on PI 28 and install on crontab by crontab -e
+#Run the scripts to generate the sensor data
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/launcher_marsRover.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/launcher_20231126003712.log 2>&1
+#Run the script to send data to the server every 15 minutes
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_sender_marsRover.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/peer_sender_20231126003712.log 2>&1
+#Run the script to receive data
+*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_marsRover.py
+ 
+ 
+##### Uncomment the Below on PI 42 and install on crontab by crontab -e
+#Run the scripts to generate the sensor data
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/launcher_landerModule.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/launcher_20231126003712.log 2>&1
+#Run the script to send data to the server every 15 minutes
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_sender_landerModule.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/peer_sender_20231126003712.log 2>&1
+#Run the script to receive data
+*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_landerModule.py
+ 
+ 
+##### Uncomment the Below on PI 31 and install on crontab by crontab -e
+#Run the scripts to generate the sensor data
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/launcher_marsSatellite.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/launcher_20231126003712.log 2>&1
+#Run the script to send data to the server every 15 minutes
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_sender_marsSatellite.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/peer_sender_20231126003712.log 2>&1
+#Run the script to receive data
+*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_marsSatellite.py
+ 
+ 
+##### Uncomment the Below on PI 24 and install on crontab by crontab -e
+#Run the scripts to generate the sensor data
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/launcher_moonSatellite.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/launcher_20231126003712.log 2>&1
+#Run the script to send data to the server every 15 minutes
+*/15 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_sender_moonSatellite.py >> /users/pgrad/singhr6/group24/broadcast/scalable_group24/logs/peer_sender_20231126003712.log 2>&1
+#Run the script to receive data
+*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_moonSatellite.py
+# Earth on PI 24
+#Run the script to receive data
+#*/14 * * * * /usr/bin/python3 /users/pgrad/singhr6/group24/broadcast/scalable_group24/peer_receiver_earth.py
