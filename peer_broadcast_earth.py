@@ -122,9 +122,9 @@ def get_csv_to_delete(device):
 if __name__ == "__main__":
     # Define your host, port, and a list of known peers
     current_id = "Earth"
-    current_host = "10.35.70.24"
-    current_port = 33340
-    known_peers = [("10.35.70.31", 33341), ("10.35.70.24", 33342)]
+    current_host = "IP_EARTH"
+    current_port = PORT_EARTH
+    known_peers = [("IP_LANDER_MODULE", PORT_LANDER_MODULE), ("IP_MOON_SATELLITE", PORT_MOON_SATELLITE)]
 
     # Create a Peer instance
     peer = Peer(current_host, current_port, known_peers)
