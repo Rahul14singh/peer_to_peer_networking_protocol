@@ -103,9 +103,9 @@ class Peer:
 if __name__ == "__main__":
     # Define your host, port, and a list of known peers
     current_id = "Lander_Module"
-    current_host = "10.35.70.42"
-    current_port = 33345
-    known_peers = [("10.35.70.31", 33341), ("10.35.70.24", 33342)]
+    current_host = "IP_LANDER_MODULE"
+    current_port = PORT_LANDER_MODULE
+    known_peers = [("IP_MARS_SATELLITE", PORT_MARS_SATELLITE), ("IP_MOON_SATELLITE", PORT_MOON_SATELLITE)]
 
     # Create a Peer instance
     peer = Peer(current_host, current_port, known_peers)
