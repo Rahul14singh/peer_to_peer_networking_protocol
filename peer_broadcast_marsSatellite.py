@@ -186,9 +186,9 @@ class Peer:
 if __name__ == "__main__":
     # Define your host, port, and a list of known peers
     current_id = "Mars_Satellite"
-    current_host = "10.35.70.31"
-    current_port = 33341
-    known_peers = [("10.35.70.12", 33343), ("10.35.70.28", 33344), ("10.35.70.42", 33345)]
+    current_host = "IP_MARS_SATELLITE"
+    current_port = PORT_MARS_SATELLITE
+    known_peers = [("IP_CURIOSITY_ROVER", PORT_CURIOSITY_ROVER), ("IP_MARS_ROVER", PORT_MARS_ROVER), ("IP_LANDER_MODULE", PORT_LANDER_MODULE)]
 
     # Create a Peer instance
     peer = Peer(current_host, current_port, known_peers)
